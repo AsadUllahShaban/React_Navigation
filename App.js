@@ -1,19 +1,15 @@
-import React from 'react';
-import {StyleSheet, Text, SafeAreaView} from 'react-native';
+import * as React from 'react';
+import { StyleSheet, Text, SafeAreaView } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import AuthNavigator from './src/naviagations/AuthNavigator';
 
-const App = () => {
-  return (
-    <SafeAreaView
-      style={{
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}>
-      <Text>App</Text>
-    </SafeAreaView>
-  );
-};
+export default function App() {
+    // isAuthenticated = true or false
+    return (
+        <NavigationContainer {/* {isAuthenticated ? AuthNavigator : DrawerNavigator} */} >
+            <AuthNavigator />
+        </NavigationContainer>
+    );
+}
 
-export default App;
 
-const styles = StyleSheet.create({});

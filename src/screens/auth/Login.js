@@ -8,10 +8,11 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
-import {COLORS, ROUTES} from '../../constants';
+import { COLORS, ROUTES } from '../../constants';
 import Logo from '../../assets/icons/LOGO.svg';
 
-const Login = () => {
+const Login = (props) => {
+  const { navigation } = props;
   return (
     <SafeAreaView style={styles.main}>
       <View style={styles.container}>
@@ -29,17 +30,17 @@ const Login = () => {
             <LinearGradient
               colors={[COLORS.gradientForm, COLORS.primary]}
               style={styles.linearGradient}
-              start={{y: 0.0, x: 0.0}}
-              end={{y: 1.0, x: 0.0}}>
+              start={{ y: 0.0, x: 0.0 }}
+              end={{ y: 1.0, x: 0.0 }}>
               {/******************** LOGIN BUTTON *********************/}
-              <TouchableOpacity activeOpacity={0.7} style={styles.loginBtn}>
+              <TouchableOpacity onPress={() => { navigation.navigate(ROUTES.HOME) }} activeOpacity={0.7} style={styles.loginBtn}>
                 <Text style={styles.loginText}>Log In</Text>
               </TouchableOpacity>
             </LinearGradient>
           </View>
 
           {/***************** FORGOT PASSWORD BUTTON *****************/}
-          <TouchableOpacity style={styles.forgotPassBtn}>
+          <TouchableOpacity style={styles.forgotPassBtn} onPress={() => { navigation.navigate(ROUTES.FORGOT_PASSWORD, { userId: 'AsadUllahShaban', }) }}>
             <Text style={styles.forgotPassText}>Forgot Password?</Text>
           </TouchableOpacity>
         </View>
