@@ -6,7 +6,7 @@ import AuthNavigator from './src/naviagations/AuthNavigator';
 export default function App() {
     // isAuthenticated = true or false
     return (
-        <NavigationContainer {/* {isAuthenticated ? AuthNavigator : DrawerNavigator} */} >
+        <NavigationContainer /*{isAuthenticated ? AuthNavigator : DrawerNavigator} */>
             <AuthNavigator />
         </NavigationContainer>
     );

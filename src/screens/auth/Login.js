@@ -19,7 +19,7 @@ const Login = (props) => {
         <View style={styles.wFull}>
           <View style={styles.row}>
             <Logo width={55} height={55} style={styles.mr7} />
-            <Text style={styles.brandName}>Olors</Text>
+            <Text style={styles.brandName}>Shaban</Text>
           </View>
 
           <Text style={styles.loginContinueTxt}>Login in to continue</Text>

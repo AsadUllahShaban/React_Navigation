@@ -1,8 +1,8 @@
 import React from 'react';
-import {StyleSheet, Text, SafeAreaView, TouchableOpacity} from 'react-native';
-import {COLORS, ROUTES} from '../../constants';
+import { StyleSheet, Text, SafeAreaView, TouchableOpacity } from 'react-native';
+import { COLORS, ROUTES } from '../../constants';
 
-const Settings = () => {
+const Settings = ({ navigation }) => {
   return (
     <SafeAreaView
       style={{
@@ -12,7 +12,7 @@ const Settings = () => {
         backgroundColor: COLORS.bgColor,
       }}>
       <Text>Settings Detail</Text>
-      <TouchableOpacity style={styles.button} activeOpacity={0.8}>
+      <TouchableOpacity style={styles.button} activeOpacity={0.8} onPress={() => navigation.goBack()}>
         <Text style={styles.buttonText}>Go Back</Text>
       </TouchableOpacity>
     </SafeAreaView>

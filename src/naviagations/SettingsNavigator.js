@@ -1,13 +1,13 @@
 import React from 'react'
 import { StyleSheet, Text, View } from 'react-native'
 import { createStackNavigator } from '@react-navigation/stack';
-import { Login, ForgotPassword, Register } from '../screens'
+import { Settings, SettingsDetail } from '../screens'
 import { COLORS, ROUTES } from '../constants'
 import BottomTabNavigator from './BottomTabNavigator';
 
 const Stack = createStackNavigator();
 
-function AuthNavigator() {
+function SettingsNavigator() {
     // console.log(Stack)
     return (
         <Stack.Navigator initialRouteName={ROUTES.LOGIN} screenOptions={{
@@ -17,14 +17,12 @@ function AuthNavigator() {
                 backgroundColor: COLORS.primary
             }
         }}>
-            <Stack.Screen name={ROUTES.LOGIN} component={Login} options={{ headerShown: false }} />
-            <Stack.Screen name={ROUTES.FORGOT_PASSWORD} component={ForgotPassword} options={({ route }) => ({ title: route.params.userId, })} />
-            <Stack.Screen name={ROUTES.REGISTER} component={Register} />
-            <Stack.Screen name={ROUTES.HOME} component={BottomTabNavigator} options={{ headerShown: false }} />
+            <Stack.Screen name={ROUTES.SETTINGS} component={Settings} />
+            <Stack.Screen name={ROUTES.SETTINGS_DETAIL} component={SettingsDetail} />
         </Stack.Navigator>
     );
 }
 
-export default AuthNavigator
+export default SettingsNavigator
 
 const styles = StyleSheet.create({})
