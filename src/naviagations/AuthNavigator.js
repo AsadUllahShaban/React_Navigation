@@ -3,7 +3,7 @@ import { StyleSheet, Text, View } from 'react-native'
 import { createStackNavigator } from '@react-navigation/stack';
 import { Login, ForgotPassword, Register } from '../screens'
 import { COLORS, ROUTES } from '../constants'
-import BottomTabNavigator from './BottomTabNavigator';
+import DrawerNavigator from './DrawerNavigator';
 
 const Stack = createStackNavigator();
 
@@ -20,7 +20,7 @@ function AuthNavigator() {
             <Stack.Screen name={ROUTES.LOGIN} component={Login} options={{ headerShown: false }} />
             <Stack.Screen name={ROUTES.FORGOT_PASSWORD} component={ForgotPassword} options={({ route }) => ({ title: route.params.userId, })} />
             <Stack.Screen name={ROUTES.REGISTER} component={Register} />
-            <Stack.Screen name={ROUTES.HOME} component={BottomTabNavigator} options={{ headerShown: false }} />
+            <Stack.Screen name={ROUTES.HOME} component={DrawerNavigator} options={{ headerShown: false }} />
         </Stack.Navigator>
     );
 }

@@ -1,6 +1,6 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import React from 'react';
-import { COLORS, ROUTES, Routes } from '../constants'
+import { COLORS, ROUTES } from '../constants'
 import { Home, Wallet, Notifications, Settings } from '..//screens'
 import Icon from 'react-native-vector-icons/Ionicons'
 import SettingsNavigator from './SettingsNavigator';
