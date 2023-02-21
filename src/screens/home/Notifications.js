@@ -1,6 +1,6 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
-import {COLORS} from '../../constants';
+import { StyleSheet, Text, View } from 'react-native';
+import { COLORS } from '../../constants';
 
 const Notifications = () => {
   return (
@@ -11,7 +11,7 @@ const Notifications = () => {
         alignItems: 'center',
         backgroundColor: COLORS.bgColor,
       }}>
-      <Text>Notification!</Text>
+      <Text>Accident Screen!</Text>
     </View>
   );
 };

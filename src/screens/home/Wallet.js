@@ -1,6 +1,6 @@
-import {StyleSheet, Text, View} from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
-import {COLORS} from '../../constants';
+import { COLORS } from '../../constants';
 
 const Wallet = () => {
   return (
@@ -11,7 +11,7 @@ const Wallet = () => {
         alignItems: 'center',
         backgroundColor: COLORS.bgColor,
       }}>
-      <Text>Wallet!</Text>
+      <Text>Request Screen!</Text>
     </View>
   );
 };

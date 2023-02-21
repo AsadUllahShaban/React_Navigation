@@ -1,6 +1,6 @@
-import {StyleSheet, Text, View} from 'react-native';
+import { StyleSheet, Text, View } from 'react-native';
 import React from 'react';
-import {COLORS} from '../../constants';
+import { COLORS } from '../../constants';
 
 const Home = () => {
   return (
@@ -11,7 +11,7 @@ const Home = () => {
         alignItems: 'center',
         backgroundColor: COLORS.bgColor,
       }}>
-      <Text>Home!</Text>
+      <Text>Home Screen!</Text>
     </View>
   );
 };

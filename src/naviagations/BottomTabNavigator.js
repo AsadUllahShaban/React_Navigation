@@ -22,7 +22,7 @@ function BottomTabNavigator() {
                     } else if (route.name == ROUTES.SETTINGS_NAVIGATOR) {
                         iconName = focused ? 'settings' : 'settings-outline'
                     } else if (route.name == ROUTES.WALLET) {
-                        iconName = focused ? 'wallet' : 'wallet-outline'
+                        iconName = focused ? 'mail-sharp' : 'mail-outline'
                     } else if (route.name == ROUTES.NOTIFICATIONS) {
                         iconName = focused ? 'md-notifications-sharp' : 'md-notifications-outline'
                     }
@@ -33,13 +33,13 @@ function BottomTabNavigator() {
             <Tab.Screen name={ROUTES.HOME_TAB} component={Home} />
             <Tab.Screen name={ROUTES.WALLET} component={Wallet} />
             <Tab.Screen name={ROUTES.NOTIFICATIONS} component={Notifications} />
-            <Tab.Screen
+            {/* <Tab.Screen
                 name={ROUTES.SETTINGS_NAVIGATOR}
                 component={SettingsNavigator}
                 options={{
                     tabBarLabel: 'Settings'
                 }}
-            />
+            /> */}
         </Tab.Navigator>
     );
 }
